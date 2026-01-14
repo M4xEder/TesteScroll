@@ -5,8 +5,10 @@
 }
 
 html, body {
-  height: 100%;
-  overflow-x: hidden; /* NUNCA hidden total */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 }
 
 body {
