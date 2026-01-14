@@ -28,7 +28,7 @@ body {
 /* Seção animada */
 .hero {
   position: relative;
-  height: 500vh;
+  height: 100vh;
   background: linear-gradient(135deg, #ff0080, #7928ca);
   display: flex;
   align-items: center;
