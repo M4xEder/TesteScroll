@@ -1,29 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  const isMobile = window.innerWidth < 768;
-
   gsap.timeline({
     scrollTrigger: {
       trigger: ".hero",
       start: "top top",
-      end: isMobile ? "+=120%" : "+=250%",
+      end: "+=200%",
       scrub: true,
-      pin: !isMobile,
-      anticipatePin: 1,
-      invalidateOnRefresh: true
+      pin: true,
+      markers: true
     }
   })
-  .to(".content h2", {
-    opacity: 1,
-    y: 0,
-    ease: "none"
-  })
-  .to(".content p", {
-    opacity: 1,
-    y: 0,
-    ease: "none"
-  }, "-=0.4");
-
-  ScrollTrigger.refresh();
+  .to(".content h2", { opacity: 1, y: 0 })
+  .to(".content p", { opacity: 1, y: 0 }, "-=0.4");
 });
